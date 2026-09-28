@@ -1,0 +1,5 @@
+.venv/
+collector.log
+__pycache__/
+*.tmp
+.DS_Store
