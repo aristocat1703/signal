@@ -39,7 +39,7 @@ def main():
         'individual_major': ['NVDA', 'AAPL', 'MSFT', 'MU', 'AMD', 'GOOGL', 'META', 'AMZN', 'QCOM', 'TXN', 'KO', 'PG', 'MRK', 'CVS'],  # QQQM·QQQI·SCHD 주요
         'sectors': ['XLK', 'XLF', 'XLE', 'XLV', 'XLI', 'XLY', 'XLP', 'XLB', 'XLU', 'XLRE', 'XLC'],  # 11개 섹터
         'indices': ['^KS11'],  # 코스피
-        'indicators': ['^VIX', '^TNX', 'KRW=X', '^CRUDE']  # VIX, 미10년물, 원/달러, WTI
+        'indicators': ['^VIX', '^TNX', 'KRW=X', 'CL=F']  # VIX, 미10년물, 원/달러, WTI
     }
     
     # 데이터 수집
