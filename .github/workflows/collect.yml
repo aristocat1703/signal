@@ -1,0 +1,21 @@
+name: collect
+# 폰에서 수동으로 수집을 돌리고 싶을 때 (Actions 탭 -> collect -> Run workflow)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python collector.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "data: manual run" && git push)
